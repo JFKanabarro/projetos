@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas</title>
+    <style>
+      table{
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        caption{
+         font-size: 1.5em;
+         font-weight: bolder;
+         padding:10px;
+         background-color: lightgrey;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead, tfoot{
+            background-color: gray;
+            color: white;
+        }
+        thead > tr > th{ 
+         position: sticky; /* grudar*/
+         top:-1px; /* ou 0 */
+         background-color: gray;/* tem ser iqual ou do cabeçario*/
+        }
+        td.num{
+            text-align: right;
+        }
+        tbody > tr:nth-child(odd){ /* 2n-1 (par)*/
+            background-color: rgba(240, 25, 10, 0.24); 
+        }
+        tbody> tr:nth-child(even){ /* 2n  (impar)*/
+         background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+     ANATOMIA PARA TABELAS GRANDES
+      TABLE
+        CAPTION -- é um tipo de legenda
+          ( NÂO usar td, tr)
+        THEAD
+          (tr-linha), (td-dados), (th-titilo)
+        TBODY
+          tr, td, th
+        TFOOT
+          tr, td, th
+
+
+         scope ="col" - informações a baixo do texto
+         scope ="row" - informações do lado do testo 
+         -->
+       
+    <table>
+      <caption>Populção da União Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+              <td>São Paulo</td>
+              <td class="num">12 396 372</td>
+           </tr>
+           <tr>
+            <td>Rio de Janeiro</td>
+            <td class="num">6 775 561</td>
+         </tr>
+         <tr>
+            <td>Brasília</td>
+            <td class="num">3 094 325</td>
+         </tr>
+         <tr>
+            <td>Salvador</td>
+            <td class="num">2 900 319</td>
+         </tr>
+         <tr>
+            <td>Fortaleza</td>
+            <td class="num">2 900 319</td>
+         </tr>
+         <tr>
+            <td>Belo Horizonte</td>
+            <td class="num">2 530 701</td>
+         </tr>
+         <tr>
+            <td>Manaus</td>
+            <td class="num">2 255 903</td>
+         </tr>
+         <tr>
+            <td>Curitiba</td>
+            <td class="num">1 963 726</td>
+         </tr>
+         <tr>
+            <td>Recife</td>
+            <td class="num">1 661 017</td>
+         </tr>
+         <tr>
+            <td>Goiânia</td>
+            <td class="num">1 555 626</td>
+         </tr>
+         <tr>
+            <td>Belém</td>
+            <td class="num">1 506 420</td>
+         </tr>
+         <tr>
+            <td>Porto Alegre</td>
+            <td class="num">1 492 530</td>
+         </tr>
+
+         <tr>
+            <td>São Luís</td>
+            <td class="num">1 115 932</td>
+         </tr>
+         <tr>
+            <td>Maceió</td>
+            <td class="num">1 031 597</td>
+         </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num">210.147.125</td>
+            </tr>
+
+        </tfoot>
+    </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit blanditiis repellendus suscipit? Autem fugit officiis dolorem, necessitatibus, quae ab debitis neque earum repellendus in doloribus, dolorum placeat quos non? Praesentium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab aliquam tempora quis quaerat accusamus pariatur animi quidem adipisci quibusdam eaque placeat assumenda modi maiores nemo delectus atque consequuntur, itaque fugiat? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero nesciunt eveniet nam maiores minima nihil voluptatem fugit obcaecati consectetur sed et, reprehenderit consequatur eius laboriosam. Officiis dicta ratione debitis delectus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eos aspernatur vel eum. Veritatis excepturi corporis non saepe ut ullam veniam. Reprehenderit dignissimos inventore est consequatur, minima mollitia nesciunt perferendis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus incidunt laudantium nihil debitis veniam voluptate consectetur iure, rerum hic alias? Nostrum aspernatur debitis alias eveniet a magnam itaque labore voluptatem!</p>
+
+</body>
+</html>
